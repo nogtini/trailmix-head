@@ -3,6 +3,7 @@
 // Globals
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components'
 
 // Components
 import LanguageCard from '../organisms/LanguageCard';
@@ -10,8 +11,26 @@ import InfoIcon from '../atoms/InfoIcon';
 import NoChoiceCard from '../organisms/NoChoiceCard';
 
 // Styles
-import localStyles from './styles/CardRow.scss';
-const styles = Object.assign({}, localStyles);
+const CardRowStyles = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+`
+
+const LanguageCardContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+const MainDescription = styled.div`
+  text-align: center;
+  font-weight: bold;
+  font-family: "Dosis";
+  font-size: 24pt;
+  color: #3A5465;
+  margin-bottom: 15px;
+`
 
 // Redux
 import { selectTaskRunnerCard, selectFrontEndCard, selectRouterCard, selectAuthCard, selectNoChoiceCard } from '../../modules/actions';
@@ -78,10 +97,10 @@ class CardRow extends Component {
 
     return (
       <div>
-        <div className={`${styles.mainDescription}`}>{data[this.props.type].description.main}</div>
-        <div className={`${styles.CardRow}`}>
+        <MainDescription>{data[this.props.type].description.main}</MainDescription>
+        <CardRowStyles>
           <InfoIcon />
-          <div className={`${styles.LanguageCardContainer}`}>
+          <LanguageCardContainer>
             <NoChoiceCard selectedCards={reducerType} selectNoChoiceCard={ () => {dispatch(selectNoChoiceCard(this.props.type))} } />
             {data[this.props.type].tools.map(function (item, id) {
               return (
@@ -93,8 +112,8 @@ class CardRow extends Component {
                 />
               )
             })}
-          </div>
-        </div>
+          </LanguageCardContainer>
+        </CardRowStyles>
       </div>
     );
   }

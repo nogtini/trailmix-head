@@ -21,6 +21,7 @@ const flexRight = styled.div`
 const flexMiddle = styled.div`
   flex: 6;
 `
+
 export default class Takeahike extends Component {
   render() {
     return (
