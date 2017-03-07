@@ -4,5 +4,8 @@ import * as trailmixReducers from './reducers';
 
 export default combineReducers({
   routing: routerReducer,
-  trailmixReducers
+  selectedTaskRunner: trailmixReducers.selectedTaskRunner,
+  selectedFrontEnd: trailmixReducers.selectedFrontEnd,
+  selectedRouter: trailmixReducers.selectedRouter,
+  selectedAuth: trailmixReducers.selectedAuth
 })

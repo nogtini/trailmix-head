@@ -1,0 +1,14 @@
+.Takeahike {
+  margin-top: 50px;
+  display: flex;
+
+  .flexLeft {
+    flex: 1;
+  }
+  .flexRight {
+    flex: 1;
+  }
+  .flexMiddle {
+    flex: 6;
+  }
+}
