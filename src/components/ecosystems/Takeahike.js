@@ -12,13 +12,13 @@ const TakeahikeStyles = styled.div`
   margin-top: 50px;
   display: flex;
 `
-const flexLeft = styled.div`
+const FlexLeft = styled.div`
   flex: 1;
 `
-const flexRight = styled.div`
+const FlexRight = styled.div`
   flex: 1;
 `
-const flexMiddle = styled.div`
+const FlexMiddle = styled.div`
   flex: 6;
 `
 
@@ -26,14 +26,14 @@ export default class Takeahike extends Component {
   render() {
     return (
       <TakeahikeStyles>
-        <flexLeft></flexLeft>
-        <flexMiddle>
+        <FlexLeft></FlexLeft>
+        <FlexMiddle>
           <CardRow type="router"/>
           <CardRow type="taskrunner" />
           <CardRow type="frontend"/>
           <CardRow type="auth"/>
-        </flexMiddle>
-        <flexRight></flexRight>
+        </FlexMiddle>
+        <FlexRight></FlexRight>
       </TakeahikeStyles>
     );
   }

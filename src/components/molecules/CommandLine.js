@@ -28,7 +28,7 @@ const CommandLineStyles = styled.div`
   justify-content: space-between;
 `
 
-const flexContainer = styled.div`
+const FlexContainer = styled.div`
   padding: 0 15px;
   display: flex;
   align-items: center;
@@ -39,13 +39,13 @@ export default class CommandLine extends Component {
   render() {
     return (
       <CommandLineStyles>
-        <flexContainer>
+        <FlexContainer>
           <BashDollar />
           <CommandText text={this.props.text} />
-        </flexContainer>
-        <flexContainer>
+        </FlexContainer>
+        <FlexContainer>
           <HelpIcon />
-        </flexContainer>
+        </FlexContainer>
       </CommandLineStyles>
     );
   }
