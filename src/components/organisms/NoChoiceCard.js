@@ -28,7 +28,7 @@ const NoChoiceCardStyled = styled.div`
   
   ${props => props.selected ? css`
     background: rgba(69,162,152,0.125);
-    box-shadow: inset 1px 2px 3px 1px rgba(0,0,0,0.125)Z;
+    box-shadow: inset 1px 2px 3px 1px rgba(0,0,0,0.125);
   
     &:hover {
     background: #BDE6AB;
