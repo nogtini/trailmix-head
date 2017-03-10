@@ -20,7 +20,7 @@ export function selectedTaskRunner(state = {}, action) {
       if(action.kind === 'taskrunner'){
         return Object.assign({}, state = {});
       }
-    // eslint-disable-next-line
+      else return state;
     default:
       return state;
   }
@@ -40,7 +40,7 @@ export function selectedFrontEnd(state = {}, action) {
       if(action.kind === 'frontend'){
         return Object.assign({}, state = {});
       }
-    // eslint-disable-next-line
+      else return state;
     default:
       return state;
   }
@@ -60,7 +60,7 @@ export function selectedRouter(state = {}, action) {
       if(action.kind === 'router'){
         return Object.assign({}, state = {});
       }
-    // eslint-disable-next-line
+      else return state;
     default:
       return state;
   }
@@ -80,7 +80,7 @@ export function selectedAuth(state = {}, action) {
       if(action.kind === 'auth'){
         return Object.assign({}, state = {});
       }
-    // eslint-disable-next-line
+      else return state;
     default:
       return state;
   }
